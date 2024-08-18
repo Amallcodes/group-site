@@ -3,31 +3,165 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* colors */
+  --background-blue: #022738;
+  --secondary-blue: #023147;
+  --light-background-blue: #1b5366;
+  --transp-blue: #022738ce;
+  --light-blue: #5BC9E1;
+  --orange: #FB8501;
+  --white: #fff;
+  --light-white: rgba(192, 192, 192, 0.76);
+  --black: rgb(0, 0, 0);
+  --grey: rgb(49, 49, 49);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    
   }
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--background-blue);
+  text-align: center;
+  color: var(--light-blue);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+/* img{
+  object-fit: cover;
+  object-position: center;
+} */
+
+button:hover {
+  background-color: var(--light-blue);
+  color: var(--grey);
+}
+
+.section {
+  padding-block: 2rem;
+  padding-inline: 1rem;
+}
+
+.top-section {
+  position: relative;
+  padding-block: 12rem;
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-inline: .5rem;
+
+  /* width: 100%;
+  height: 100%; */
+
+  background-color: var(--transp-blue);
+}
+
+.top-section h1 {
+  color: var(--white);
+  font-size: 1.5rem;
+  line-height: 50px;
+}
+
+.top-section h1,
+.top-section p {
+  /* margin: auto; */
+  margin-bottom: 30px;
+}
+
+.top-section p {
+  color: var(--light-white);
+  font-size: .8rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+
+p {
+  font-weight: 300;
+  font-size: .8rem;
+}
+
+
+
+button {
+  border: 1px solid var(--light-blue);
+  padding: .7rem;
+  width: 220px;
+  color: var(--light-blue);
+  font-weight: 500;
+}
+
+.light-blue {
+  color: var(--light-blue);
+}
+
+.orange {
+  color: var(--orange);
+}
+
+.icons {
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.icon-case {
+  padding: .5rem;
+  background-color: var(--white);
+  border-radius: 5px;
+}
+
+.icon {
+  font-size: 1rem;
+  color: var(--background-blue);
+}
+
+@media screen and (min-width: 900px) {
+  .top-section h1 {
+    font-size: 2.4rem;
+    width: 600px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3{
+    font-size: 1.1rem;
+  }
+
+  .section {
+    padding-block: 1rem;
+    padding-inline: 4rem;
+  }
+
+  .top-section {
+    padding-block: 9rem;
+  }
+
+  .top-section p {
+    font-size: 1rem;
+    width: 350px;
+  }
+}
+
+/* tablet */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .top-section p {
+    width: 350px;
   }
 }

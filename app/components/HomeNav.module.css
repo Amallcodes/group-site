@@ -1,0 +1,33 @@
+.navLinks{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    color: var(--white);
+    font-weight: 200;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1rem ;
+    /* margin: auto -1rem; */
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: var(--light-background-blue);
+}
+
+.navLinks a{
+    font-size: .8rem;
+}
+
+@media screen and (min-width: 900px) {
+    .navLinks {
+      width: 90%;
+      left: 4rem;
+    }
+
+    .navLinks a{
+        font-size: 1rem;
+    }
+}
