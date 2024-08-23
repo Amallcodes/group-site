@@ -16,6 +16,10 @@
   --grey: rgb(49, 49, 49);
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 /* @media (prefers-color-scheme: dark) {
   :root {
     
@@ -94,8 +98,6 @@ p {
   font-size: .8rem;
 }
 
-
-
 button {
   border: 1px solid var(--light-blue);
   padding: .7rem;
@@ -130,6 +132,25 @@ button {
   color: var(--background-blue);
 }
 
+.footer .icon-case{
+  background-color: transparent;
+  padding: 0;
+}
+
+.footer .icon{
+  color: var(--light-blue);
+  font-size: 1.2rem;
+  /* margin-top: -5px; */
+}
+
+.footer p{
+  font-size: .9rem;
+}
+
+.custom-shadow {
+  /* box-shadow: 0 -20px 30px 10px #020c38; */
+}
+
 @media screen and (min-width: 900px) {
   .top-section h1 {
     font-size: 2.4rem;
@@ -156,6 +177,10 @@ button {
   .top-section p {
     font-size: 1rem;
     width: 350px;
+  }
+
+  .footer .icons{
+    width: 100%;
   }
 }
 
